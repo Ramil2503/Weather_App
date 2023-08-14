@@ -1,0 +1,54 @@
+
+/*смена темы на тёмную/светлую*/
+
+
+html.dark, .dark body,
+.dark #root{
+    background: var(--background-dark);
+}
+
+.dark .search-panel__search:hover{
+	color: var(--background-dark);
+}
+
+.dark .asidebar__container,
+.dark .search-panel,
+.dark .forecast__option__card,
+.dark .weather__today__card,
+.dark .weather__details__card,
+.dark .search__item{
+	background-color: var(--panel-dark);
+}
+
+/*смена цвета на light grey */
+.dark .asidebar__footer,
+.dark .search-panel__search,
+.dark .aside__Btn,
+.dark .search__input,
+.dark .cancelBtn,
+.dark .forecast__header__title,
+.dark .forecast__option.active,
+.dark .forecast__date,
+.dark .forecast__tempreature,
+.dark .weather__today__title,
+.dark .weather__today__card__heading,
+.dark .weather__today__card__data,
+.dark .weather__today__card__photo,
+.dark .weather__details__card__heading,
+.dark .weather__details__card__data,
+.dark .search__item{
+	color: var( --light-gray);
+}
+
+.dark .forecast__option,
+.dark .forecast__tempreature__min{
+	color: var(--secondary-text);
+}
+
+.dark .forecast__option.active{
+	border-bottom: 3px solid var(--light-gray);
+}
+
+.dark .aside-board__search__cancel svg{
+    color: var(--light-gray);
+}

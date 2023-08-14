@@ -1,0 +1,104 @@
+.weather__today__title{
+    color: var(--gray);
+    font-weight: 700;
+    letter-spacing: -1px;
+    margin-bottom: 19px;
+    font-size: 24px;
+    line-height: 1;
+}
+
+.weather__today__info{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: minmax(162px, max-content);
+    row-gap: 18px;
+    column-gap: 45px;
+}
+
+.weather__today__card{
+    height: 100%;
+    padding: 20px 25px 10px;
+    border-radius: 10px;
+    text-align: center;
+    background: var(--panel-light);
+    box-shadow: 0px 8px 15px 0px rgba(0, 0, 0, 0.05);
+    transition: background-color .4s ease-in;
+}
+
+.weather__today__card:nth-child(3),
+.weather__today__card:nth-child(4){
+    height: 90%;
+}
+
+
+.weather__today__card__heading {
+    margin-bottom: 11px;
+    font-size: 18px;
+}
+
+.weather__today__card__data {
+    margin-bottom: 3px;
+    font-size: 64px;
+    font-weight: 900;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: var(--gray);
+}
+
+.weather__today__card__data span {
+    font-size: 36px;
+    font-weight: 500;
+}
+
+.weather__today__card:nth-child(4) span {
+    font-size: 18px;
+}
+
+.weather__today__card__photo {
+    display:inline-flex;
+    align-items: center;
+    gap: 11px;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.weather__today__card:nth-child(2) .weather__today__card__photo,
+.weather__today__card:nth-child(3) .weather__today__card__photo,
+.weather__today__card:nth-child(4) .weather__today__card__photo{
+    display: none;
+}
+
+
+@media (max-width: 1439px) {
+    .weather__today__info {
+        column-gap: 18px;
+    }
+}
+
+@media (max-width: 1230px) {
+    .weather__today__info {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 27px;
+    }
+}
+
+@media (max-width: 1050px) {
+    .weather__today__info {
+        padding: 0 14px;
+    }
+}
+
+@media (max-width: 834px) {
+
+    .weather__today__info {
+        margin: 0 -30px;
+    }
+}
+
+@media (max-width: 834px) {
+    .weather__today__info {
+        justify-content: center;
+        margin: 0;
+    }
+}  

@@ -1,0 +1,17 @@
+:root{
+    --background-light: #F1F1F1;
+    --panel-light: #FFF;
+    --light-gray:#E6E6E6;
+
+    --secondaryText: #D3D3D3;
+
+    --hint:#ACACAC;
+    --gray: #48484A;
+    --accent: #EC6E4D;
+
+    --box-shadow:rgba(0, 0, 0, 0.05);
+
+    --panel-dark: #212331;
+    --background-dark: #100E1C;
+    --secondary-text: #6D6D6D;
+}

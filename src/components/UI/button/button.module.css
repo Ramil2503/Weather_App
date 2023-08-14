@@ -1,0 +1,37 @@
+.aside__Btn{
+    border: 2px solid var(--hint);
+    color: var(--gray);
+    border-radius: 10px;
+    padding: 12px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    transition-property: background, color, border-color;
+    transition-duration: .2s;
+    transition-timing-function: ease-in-out;
+}
+
+.aside__Btn:hover{
+    background-color: var(--light-gray);
+    color: var(--gray);
+    border: 2px solid transparent;
+}
+
+.aside__Btn:active{
+    border: 2px solid var(--gray);
+}
+
+.dark .aside__Btn{
+    color: var( --light-gray);
+}
+
+.asideboard__search__cancel{
+    position: absolute;
+    top: 45px;
+    right: 45px;
+    transition: opacity .2s ease-in-out;
+    cursor: pointer;
+}
+
+.asideboard__search__cancel svg{
+    color: var(--gray);
+}

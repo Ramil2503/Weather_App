@@ -1,0 +1,255 @@
+.forecast {
+  margin-bottom: 38px;
+}
+
+.forecast__header{
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 25px;
+}
+
+.forecast__header__options {
+  display: flex;
+  gap: 16px;
+}
+
+.forecast__header__title{
+  margin: 0;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1;
+  font-weight: bold;
+  color: var(--gray);
+}
+
+.forecast__option{
+  cursor: pointer;
+  font-size: 18px;
+  color: var(--hint);
+  font-weight: 700;
+  line-height:  25px;
+}
+
+.forecast__option.active{
+  color: var(--gray);
+  border-bottom: 3px solid var(--gray);
+}
+
+.forecast__options__content{
+  position: relative;
+}
+
+
+.forecast__option__item{
+  display: none;
+}
+
+.forecast__option__item.active{
+  display: flex;
+}
+
+.forecast__previousBtn{
+  position: relative;
+  top: 1px;
+  margin-right: 24px;
+  margin-left: -55px;
+}
+.forecast__nextBtn{
+  position: relative;
+  top: 1px;
+  /* right: -24px; */
+  margin-left: 24px;
+  margin-right: -55px;
+}
+
+.forecast__option__cards{
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 24px;
+  overflow: hidden;
+}
+
+.forecast__option__card{
+  box-sizing: border-box;
+  padding-top: 17px;
+  padding-bottom: 15px;
+  border-radius: 8px;
+  text-align: center;
+  background: var(--panel-light);
+  box-shadow: 0px 7px 12px 0px var(--box-shadow);;
+  transition: background-color .4s ease-in;
+}
+
+.forecast__date{
+  text-align: center;
+  color: var(--gray);
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.forecast__tempreature{
+  display: flex;
+  justify-content: space-evenly;
+  color: var(--gray);
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.forecast__image {
+  margin-top: -10px;
+  margin-bottom: -18px;
+}
+
+
+.forecast__tempreature__min{
+  color: var(--secondaryText);
+}
+
+
+
+
+@media (max-width: 1439px) {
+  .forecast__option__cards {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  /* .forecast__option__card:nth-child(n+5) {
+    display: none;
+  } */
+}
+
+@media (max-width: 1230px) {
+  .forecast__option__cards {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  /* .forecast__option__card:nth-child(n+4) {
+    display: none;
+  } */
+}
+
+
+@media (max-width: 834px) {
+  .forecast__header {
+    flex-direction: column;
+  }
+
+  .forecast__option__cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  /* .forecast__option__card:nth-child(n+3) {
+    display: none;
+  } */
+
+  .forecast__previousBtn {
+    margin-left: -20px;
+  }
+}
+
+@media (max-width: 834px) {
+  .forecast {
+    margin-bottom: 59px;
+  }
+
+  .forecast__header {
+    gap: 30px;
+    margin-bottom: 42px;
+  }
+
+  .forecast__header__options {
+    gap: 55px;
+  }
+
+
+  .forecast__option__cards {
+    row-gap: 30px;
+    column-gap: 55px;
+  }
+
+  .forecast__option__card:nth-child(n+3) {
+    display: block;
+  }
+
+  .forecast__previousBtn {
+    display: none;
+  }
+
+  .forecast__nextBtn{
+    display: none;
+  }
+}
+
+@media (max-width: 460px) {
+  .forecast__option__cards {
+    grid-template-columns: repeat(2, minmax(0, 100px));
+    justify-content: center;
+  }
+}
+
+@media (max-width: 360px) {
+  .forecast__header__options {
+    gap: 30px;
+  }
+
+  .forecast__option__cards {
+    gap: 30px;
+  }
+}
+
+
+@media (max-width: 1050px){
+  .forecast__previousBtn {
+    margin-left: -38px;
+  }
+}
+
+
+.forecast__previousBtn svg,
+.forecast__nextBtn svg{
+  color: var(--panel-light);
+}
+
+.dark .forecast__previousBtn svg,
+.dark .forecast__nextBtn svg{
+  color: var(--panel-dark);
+}
+
+/* .forecast__option__card:nth-child(n+7) {
+  display: none;
+} */
+
+/* .forecast__option__cards {
+  display: flex;
+  overflow: hidden;
+} */
+
+@media (min-width: 834px) {
+  .forecast__option__cards__container {
+    display: flex;
+    gap: 24px;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .forecast__nextBtn.max-scrolled,
+  .forecast__previousBtn.max-scrolled {
+    opacity: 0.5; /* Adjust the opacity value as needed */
+    cursor: not-allowed; /* Optional: Change cursor to indicate unclickable */
+  }
+}
+
+@media (max-width: 834px) {
+  .forecast__option__cards {
+    display: block;
+    width: 100%;
+  }
+  .forecast__option__cards__container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 100px));
+    justify-content: center;
+    row-gap: 30px;
+    column-gap: 55px;
+  }
+}
