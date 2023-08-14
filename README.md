@@ -1,6 +1,8 @@
 # Weather App
 ReactJS project with dark and white theme, responsive for mobile, tablet, and desktop view.
 
+Link to the deployment: https://weather-app-sage-mu.vercel.app/
+
 ---
 
 <div style="text-align: center;">
